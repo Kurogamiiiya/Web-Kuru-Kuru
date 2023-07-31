@@ -1,0 +1,169 @@
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr 1fr;
+
+  height: 100vh;
+}
+
+.navbar {
+  grid-column: 1/1;
+  grid-row: 1/1;
+  background-color: rgb(50, 50, 50);
+  color: aliceblue;
+  text-align: center;
+  align-items: center;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.burgerMenu {
+  grid-column: 1/1;
+  grid-row: 2/4;
+
+  background-color: rgba(87, 87, 87, 0.575);
+  color: aliceblue;
+
+  transform: translateX(0);
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.selectChar {
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+  color: aliceblue;
+
+  background-color: rgba(0, 0, 0, 0.171);
+
+  width: 40%;
+  height: 30%;
+}
+
+option {
+  color: rgb(36, 33, 33);
+}
+
+.imgContainer {
+  position: relative;
+
+  grid-column: 1/1;
+  grid-row: 2/7;
+
+  background-color: rgb(63, 63, 63);
+
+  overflow: hidden;
+
+  display: flex;
+  direction: rtl;
+  justify-content: center;
+  text-align: center;
+  align-items: end;
+}
+
+img {
+  position: absolute;
+
+  max-width: 300px;
+  max-height: 300px;
+  width: 60%;
+  height: 40%;
+
+  right: -20%;
+  top: 20%;
+}
+
+.btn.menu {
+  border: none;
+  background-color: rgb(50, 50, 50);
+  color: aliceblue;
+  color-scheme: rgb(50, 50, 50);
+
+  width: 50%;
+  height: 100%;
+}
+
+.btn.click {
+  border: none;
+  background-color: rgb(50, 50, 50);
+  color: aliceblue;
+
+  width: 5rem;
+  height: 3rem;
+
+  margin-bottom: 6rem;
+  margin-left: 1rem;
+
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+.btn.click:hover {
+  background-color: rgb(117, 37, 138);
+  color: rgb(204, 200, 204);
+}
+
+/* Animation */
+
+@keyframes slideRightImg {
+  0% {
+    right: -30%;
+  }
+  100% {
+    right: 110%;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slideRightImg {
+  animation-name: slideRightImg;
+  animation-duration: 1.2s;
+  animation-timing-function: linear;
+}
+
+.slideLeft {
+  animation-name: slideLeft;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
+  animation-direction: alternate;
+}
+
+.slideRight {
+  animation-name: slideRight;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+  animation-direction: alternate;
+}

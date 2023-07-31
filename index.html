@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <button id="bmButton" onclick="burgerMenu()" class="btn menu">
+          <h2>=</h2>
+          <div></div>
+          <div></div>
+        </button>
+        <h2>Kuru Kuru</h2>
+        <h4>
+          <a
+            href="https://github.com/Kurogamiiiya"
+            style="text-decoration: none; color: aliceblue"
+            >gitHub</a
+          >
+        </h4>
+      </div>
+
+      <div id="imgContainer" class="imgContainer">
+        <h1 id="charText" style="position: absolute; color: aliceblue; top: 4%">
+          Herta
+        </h1>
+        <h1
+          id="indexText"
+          style="position: absolute; color: aliceblue; top: 10%"
+        >
+          0
+        </h1>
+
+        <h4
+          id="questText"
+          style="position: absolute; color: aliceblue; top: 93%"
+        >
+          !Kuru-kuru 50x to unlock kafka
+        </h4>
+
+        <button class="btn click" onclick="spawn()"><h3>Click</h3></button>
+      </div>
+
+      <div id="bmMenu" class="burgerMenu slideLeft">
+        <label style="color: aliceblue; font-size: 200%" for="char"
+          >Select Character
+        </label>
+        <select
+          class="selectChar"
+          onchange="changeChar()"
+          name="char"
+          id="charSelect"
+        ></select>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
